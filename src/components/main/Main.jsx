@@ -112,7 +112,7 @@ function Main() {
 
       </div>
       <div id="notesDashboard">
-        <h1 id="notedHeader"> NOTES </h1>
+        <h1 id="notedHeader"> TO DO </h1>
         <NoteList notes={notes} onSelect={openNote} />
       </div>
     </div>
