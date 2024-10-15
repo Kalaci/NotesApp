@@ -1,0 +1,118 @@
+#mainBody{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+#notesSideBar{
+    background-color: #DFD3C3;
+    width: 40%;
+    border-right: 5px;
+    border-color: black;
+}
+
+#newNoteBtn{
+    background-color: #d0b8a800;
+    border: none;
+    font-family: Georgia, serif; 
+    font-weight: 900; 
+    font-size: 30px;
+    padding: 10px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+#newNoteBtn:hover span {
+    display: inline-block;
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+}
+
+#buttonClass{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin: 3% 15px 0px 15px;
+}
+
+#buttonClass button{
+    width: 50%;
+    height: 45px;
+    border: none;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 16px; 
+    padding: 6px; 
+    border-radius: 10px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none;
+    background-color: #D0B8A8;
+}
+
+#noteInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25%;
+    gap: 10px;
+}
+
+#noteInfo input{
+    width: 85%;
+    border-radius: 10px; 
+    height: 20px;;
+}
+
+#noteInfo #text{
+    height: 20vh;
+    width: 85%;
+    resize: none;
+    overflow-y: auto;
+    border-radius: 10px; 
+}
+
+#notesDashboard{
+    background-color:#F8EDE3;
+    width: 65%;
+}
+
+#notedHeader{
+    margin: 5%;
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    padding-left: 10px ;
+}
+
+#notesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+#note {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#note h5{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#noteContent{
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
