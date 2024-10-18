@@ -85,34 +85,46 @@
     margin: 5%;
     font-family: Georgia, serif; 
     font-weight: normal; 
-    padding-left: 10px ;
+    margin-left: 20px;
 }
 
-#notesList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 10px;
-}
-
-#note {
+#notesDashboardHeader{
     display: flex;
-    flex-direction: column;
-    background-color: white;
+    align-items: center;
+}
+
+#notesDashboardHeader input {
     padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-y: hidden;
-    overflow-x: hidden;
+    width: 70%;
+    background-color: #d0b8a800;
+    border: none;
+    border-bottom: 1px solid #000;
 }
 
-#note h5{
-    margin-top: 10px;
-    margin-bottom: 0px;
+#notesDashboardHeader input:focus {
+    outline: none;
 }
 
-#noteContent{
-    white-space: nowrap;
-    overflow: hidden; 
-    text-overflow: ellipsis;
-}
+/*screens smaller than 1200px */
+@media (max-width: 1200px) {
+    #notesDashboardHeader input{
+      width: 60%;
+    }
+  }
+  
+  /*screens smaller than 600px */
+  @media (max-width: 600px) {
+    #notesDashboardHeader input{
+        width: 40%;
+    }
+  }
+  
+  #statusFilterMenu{
+    background-color: #d0b8a800;
+    border: none;
+    padding: 10px;
+  }
+
+  #statusFilterMenu:focus{
+    outline: none;
+  }

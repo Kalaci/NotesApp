@@ -1,0 +1,32 @@
+.task-widgets {
+    display: flex;
+    flex-direction: row;
+    gap: 6vw; 
+    font-size: 14px; 
+  }
+
+  h3{
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  p{
+    margin: 0;
+  }
+  
+  /*screens smaller than 1200px */
+  @media (max-width: 1200px) {
+    .task-widgets {
+      gap: 3vw; 
+      font-size: 10px;
+    }
+  }
+  
+  /*screens smaller than 600px */
+  @media (max-width: 600px) {
+    .task-widgets {
+      gap: 2vw; 
+      font-size: 8px; 
+    }
+  }
+  

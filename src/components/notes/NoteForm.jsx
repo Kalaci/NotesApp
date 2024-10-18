@@ -1,7 +1,6 @@
-import React from 'react';
-import './../main/Main.css';
+import React, { memo } from "react";
 
-function NoteForm({ title, content, onTitleChange, onContentChange }) {
+const NoteForm = memo(({ title, content, completed, onTitleChange, onContentChange, onChangeCompletion, isUpdateMode }) => {
   return (
     <div id="noteInfo">
       <input 
@@ -18,8 +17,17 @@ function NoteForm({ title, content, onTitleChange, onContentChange }) {
         onChange={onContentChange} 
         value={content}
       />
+      <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <h5 style={{ margin: 0, width: '10vh', paddingTop: "5px" }}>Completed</h5>
+        <input 
+          type="checkbox" 
+          onChange={onChangeCompletion}
+          checked={completed}
+          disabled={!isUpdateMode}  
+        />
+      </div>
     </div>
   );
-}
+});
 
 export default NoteForm;
